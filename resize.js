@@ -5,7 +5,9 @@ function bang () {
     browser = this.patcher.getnamed('thebrowser')
   }
   if ( !browser ) {
-    post('no browser...')
+    if ( Math.random() < 0.01 ) {
+      post('(sonificator: browser resize) no browser...')
+    }
     return
   }
    browser.setattr(
