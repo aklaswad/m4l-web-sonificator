@@ -5,7 +5,6 @@ var map = {}
 var reverse_map = {}
 
 function set () {    
-    post('got', arguments)
     // 36 : C1 of midi note
     var nn = 36 + arguments[0]
 
@@ -17,7 +16,6 @@ function set () {
       delete rev[nn]
     }
     var nodes = []
-    post('\n', nn)
     for ( var i=1; i<arguments.length; i++) {
       var node = arguments[i].toLowerCase()
       nodes.push(node)
@@ -25,9 +23,7 @@ function set () {
         reverse_map[node] = {}
       }
       reverse_map[node][nn] = 1
-      post('\n',arguments[i])
     }
-    post('\n', nodes)
     map[nn] = nodes
 }
 
