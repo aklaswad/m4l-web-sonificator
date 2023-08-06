@@ -2,6 +2,8 @@
 (function () {
   var MAX_RESTS = 16;
   var rests = 0;
+  var glitchRatio = 0.0
+
   var style_rules = [
     '.soni-background0 { -webkit-transition: all 5.5s; background-color: #030303 !important; }',
     '.soni-background1 { -webkit-transition: all 5.5s; background-color: #080010 !important; }',
@@ -126,7 +128,7 @@
       if (ctx.currentVisibility) {
         elem.scrollIntoView({ behavior: Math.random() < 0.8 ? 'instant' : 'smooth', block: 'center', inline: 'center' })
         elem.classList.remove('soni-highlight-fadeout')
-        if (Math.random() < 1.2) {
+        if (Math.random() < (1.0 - glitchRatio)) {
           elem.classList.add('soni-highlight', 'soni-highlight-active')
         }
         else {
@@ -222,6 +224,15 @@
     }
     visualize(ctx)
     setTimeout(findNextNode, 1)
+  })
+
+  window.max.bindInlet('set', function (key, value) {
+    switch (key) {
+      case 'visual.glitch':
+        glitchRatio = value
+        break
+      default:
+    }
   })
 })()
 
