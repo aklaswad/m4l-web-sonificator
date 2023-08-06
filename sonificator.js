@@ -155,7 +155,7 @@ window.addEventListener('resize', () =>{
       if ( ctx.currentVisibility ) {
         elem.scrollIntoView({ behavior: Math.random() < 0.8 ? 'instant' : 'smooth', block: 'center', inline: 'center' })
         elem.classList.remove('soni-highlight-fadeout')
-        if ( Math.random() < 0.2 ) {
+        if ( Math.random() < 1.2 ) {
           elem.classList.add('soni-highlight', 'soni-highlight-active')
         }
         else {

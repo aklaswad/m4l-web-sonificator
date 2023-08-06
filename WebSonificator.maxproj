@@ -2,7 +2,7 @@
 	"name" : "WebSonificator",
 	"version" : 1,
 	"creationdate" : 3773577838,
-	"modificationdate" : 3773806092,
+	"modificationdate" : 3774137156,
 	"viewrect" : [ 603.0, 262.0, 398.0, 500.0 ],
 	"autoorganize" : 0,
 	"hideprojectwindow" : 0,
@@ -19,27 +19,17 @@
 		}
 ,
 		"code" : 		{
-			"sonificator.js" : 			{
+			"loader.js" : 			{
 				"kind" : "javascript",
-				"local" : 1,
-				"singleton" : 				{
-					"bootpath" : "~/Documents/Ableton/User Library/MyM4L/WebSonificator",
-					"projectrelativepath" : "."
-				}
-
+				"local" : 1
 			}
 ,
 			"resize.js" : 			{
 				"kind" : "javascript",
-				"local" : 1,
-				"singleton" : 				{
-					"bootpath" : "~/Documents/Ableton/User Library/MyM4L/WebSonificator",
-					"projectrelativepath" : "."
-				}
-
+				"local" : 1
 			}
 ,
-			"loader.js" : 			{
+			"sonificator.js" : 			{
 				"kind" : "javascript",
 				"local" : 1,
 				"singleton" : 				{
