@@ -10,7 +10,7 @@
 		}
 ,
 		"classnamespace" : "box",
-		"rect" : [ 315.0, 112.0, 1512.0, 870.0 ],
+		"rect" : [ 332.0, 189.0, 958.0, 870.0 ],
 		"openrect" : [ 0.0, 0.0, 0.0, 169.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 1,
@@ -42,13 +42,12 @@
 		"boxes" : [ 			{
 				"box" : 				{
 					"id" : "obj-41",
-					"linecount" : 2,
 					"maxclass" : "message",
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 160.0, 56.0, 231.0, 36.0 ],
-					"text" : "title \"Creative tools for music makers | Ableton\""
+					"patching_rect" : [ 1106.0, 94.0, 231.0, 22.0 ],
+					"text" : "visend"
 				}
 
 			}
@@ -133,7 +132,7 @@
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 15.0, 557.0, 470.0, 22.0 ],
+					"patching_rect" : [ 15.0, 566.0, 470.0, 22.0 ],
 					"text" : "\"C:/Users/aklas/Documents/Ableton/User Library/MyM4L/WebSonificator/patchers/\""
 				}
 
@@ -496,7 +495,7 @@
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 851.5, 304.0, 50.0, 22.0 ],
-					"text" : "60"
+					"text" : "33"
 				}
 
 			}
@@ -670,7 +669,7 @@
 						}
 ,
 						"classnamespace" : "box",
-						"rect" : [ 356.0, 144.0, 1200.0, 851.0 ],
+						"rect" : [ 712.0, 144.0, 1200.0, 851.0 ],
 						"bglocked" : 0,
 						"openinpresentation" : 1,
 						"default_fontsize" : 12.0,
@@ -931,7 +930,7 @@
 									"presentation" : 1,
 									"presentation_rect" : [ 0.0, 28.0, 1200.0, 823.0 ],
 									"rendermode" : 0,
-									"url" : "https://ableton.com",
+									"url" : "https://ableton.com/",
 									"varname" : "thebrowser"
 								}
 
@@ -1384,16 +1383,7 @@
 			}
 , 			{
 				"patchline" : 				{
-					"destination" : [ "obj-41", 1 ],
-					"order" : 1,
-					"source" : [ "obj-65", 0 ]
-				}
-
-			}
-, 			{
-				"patchline" : 				{
 					"destination" : [ "obj-70", 0 ],
-					"order" : 0,
 					"source" : [ "obj-65", 0 ]
 				}
 
@@ -1410,6 +1400,13 @@
 					"destination" : [ "obj-30", 0 ],
 					"order" : 0,
 					"source" : [ "obj-70", 1 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-41", 1 ],
+					"source" : [ "obj-70", 2 ]
 				}
 
 			}
