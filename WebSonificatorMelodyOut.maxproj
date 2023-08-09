@@ -2,9 +2,9 @@
 	"name" : "WebSonificatorMelodyOut",
 	"version" : 1,
 	"creationdate" : 3774209612,
-	"modificationdate" : 3774233166,
+	"modificationdate" : 3774442827,
 	"viewrect" : [ 25.0, 107.0, 300.0, 500.0 ],
-	"autoorganize" : 1,
+	"autoorganize" : 0,
 	"hideprojectwindow" : 0,
 	"showdependencies" : 1,
 	"autolocalize" : 0,
@@ -16,7 +16,7 @@
 				"toplevel" : 1,
 				"singleton" : 				{
 					"bootpath" : "~/Documents/Ableton/User Library/MyM4L/WebSonificator/patchers",
-					"projectrelativepath" : "../patchers"
+					"projectrelativepath" : "./patchers"
 				}
 
 			}
