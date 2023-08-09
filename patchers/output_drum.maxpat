@@ -159,7 +159,7 @@
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 113.0, 498.0, 50.0, 22.0 ],
 					"presentation" : 1,
-					"presentation_rect" : [ 350.5, 110.0, 331.0, 22.0 ]
+					"presentation_rect" : [ 696.5, 145.0, 331.0, 22.0 ]
 				}
 
 			}
@@ -172,7 +172,7 @@
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 46.0, 498.0, 50.0, 22.0 ],
 					"presentation" : 1,
-					"presentation_rect" : [ 2.5, 110.0, 331.0, 22.0 ]
+					"presentation_rect" : [ 696.5, 121.0, 331.0, 22.0 ]
 				}
 
 			}
@@ -672,7 +672,7 @@
 					"parameter_enable" : 1,
 					"patching_rect" : [ 593.0, 16.0, 58.0, 26.5 ],
 					"presentation" : 1,
-					"presentation_rect" : [ 523.5, 3.5, 168.0, 22.5 ],
+					"presentation_rect" : [ 523.5, 4.5, 168.0, 39.5 ],
 					"saved_attribute_attributes" : 					{
 						"valueof" : 						{
 							"parameter_enum" : [ "0", "1" ],
@@ -701,7 +701,7 @@
 					"parameter_enable" : 1,
 					"patching_rect" : [ 513.0, 16.0, 58.0, 26.5 ],
 					"presentation" : 1,
-					"presentation_rect" : [ 350.5, 3.5, 168.0, 22.5 ],
+					"presentation_rect" : [ 350.5, 4.5, 168.0, 39.5 ],
 					"saved_attribute_attributes" : 					{
 						"valueof" : 						{
 							"parameter_enum" : [ "0", "1" ],
@@ -730,7 +730,7 @@
 					"parameter_enable" : 1,
 					"patching_rect" : [ 420.0, 16.0, 58.0, 26.5 ],
 					"presentation" : 1,
-					"presentation_rect" : [ 176.5, 3.5, 168.0, 22.5 ],
+					"presentation_rect" : [ 176.5, 4.5, 168.0, 39.5 ],
 					"saved_attribute_attributes" : 					{
 						"valueof" : 						{
 							"parameter_enum" : [ "0", "1" ],
@@ -759,7 +759,7 @@
 					"parameter_enable" : 1,
 					"patching_rect" : [ 339.5, 16.0, 58.0, 26.5 ],
 					"presentation" : 1,
-					"presentation_rect" : [ 2.5, 3.5, 168.0, 22.5 ],
+					"presentation_rect" : [ 2.5, 4.5, 168.0, 39.5 ],
 					"saved_attribute_attributes" : 					{
 						"valueof" : 						{
 							"parameter_enum" : [ "0", "1" ],
@@ -788,7 +788,7 @@
 					"parameter_enable" : 1,
 					"patching_rect" : [ 594.0, 134.0, 58.0, 26.5 ],
 					"presentation" : 1,
-					"presentation_rect" : [ 523.5, 29.5, 168.0, 22.5 ],
+					"presentation_rect" : [ 523.5, 45.5, 168.0, 39.5 ],
 					"saved_attribute_attributes" : 					{
 						"valueof" : 						{
 							"parameter_enum" : [ "0", "1" ],
@@ -817,7 +817,7 @@
 					"parameter_enable" : 1,
 					"patching_rect" : [ 505.0, 134.0, 58.0, 26.5 ],
 					"presentation" : 1,
-					"presentation_rect" : [ 350.5, 29.5, 168.0, 22.5 ],
+					"presentation_rect" : [ 350.5, 45.5, 168.0, 39.5 ],
 					"saved_attribute_attributes" : 					{
 						"valueof" : 						{
 							"parameter_enum" : [ "0", "1" ],
@@ -847,7 +847,7 @@
 					"parameter_enable" : 1,
 					"patching_rect" : [ 416.0, 134.0, 58.0, 26.5 ],
 					"presentation" : 1,
-					"presentation_rect" : [ 176.5, 29.5, 168.0, 22.5 ],
+					"presentation_rect" : [ 176.5, 45.5, 168.0, 39.5 ],
 					"saved_attribute_attributes" : 					{
 						"valueof" : 						{
 							"parameter_enum" : [ "0", "1" ],
@@ -877,7 +877,7 @@
 					"parameter_enable" : 1,
 					"patching_rect" : [ 338.5, 134.0, 58.0, 26.5 ],
 					"presentation" : 1,
-					"presentation_rect" : [ 2.5, 29.5, 168.0, 22.5 ],
+					"presentation_rect" : [ 2.5, 45.5, 168.0, 39.5 ],
 					"saved_attribute_attributes" : 					{
 						"valueof" : 						{
 							"parameter_enum" : [ "0", "1" ],
@@ -907,7 +907,7 @@
 					"parameter_enable" : 1,
 					"patching_rect" : [ 592.0, 239.0, 58.0, 26.5 ],
 					"presentation" : 1,
-					"presentation_rect" : [ 523.5, 55.5, 168.0, 22.5 ],
+					"presentation_rect" : [ 523.5, 86.5, 168.0, 39.5 ],
 					"saved_attribute_attributes" : 					{
 						"valueof" : 						{
 							"parameter_enum" : [ "0", "1" ],
@@ -937,7 +937,7 @@
 					"parameter_enable" : 1,
 					"patching_rect" : [ 508.0, 245.0, 58.0, 26.5 ],
 					"presentation" : 1,
-					"presentation_rect" : [ 350.5, 55.5, 168.0, 22.5 ],
+					"presentation_rect" : [ 350.5, 86.5, 168.0, 39.5 ],
 					"saved_attribute_attributes" : 					{
 						"valueof" : 						{
 							"parameter_enum" : [ "0", "1" ],
@@ -967,7 +967,7 @@
 					"parameter_enable" : 1,
 					"patching_rect" : [ 419.0, 245.25, 58.0, 26.5 ],
 					"presentation" : 1,
-					"presentation_rect" : [ 176.5, 55.5, 168.0, 22.5 ],
+					"presentation_rect" : [ 176.5, 86.5, 168.0, 39.5 ],
 					"saved_attribute_attributes" : 					{
 						"valueof" : 						{
 							"parameter_enum" : [ "0", "1" ],
@@ -997,7 +997,7 @@
 					"parameter_enable" : 1,
 					"patching_rect" : [ 341.5, 245.25, 58.0, 26.5 ],
 					"presentation" : 1,
-					"presentation_rect" : [ 2.5, 55.5, 168.0, 22.5 ],
+					"presentation_rect" : [ 2.5, 86.5, 168.0, 39.5 ],
 					"saved_attribute_attributes" : 					{
 						"valueof" : 						{
 							"parameter_enum" : [ "0", "1" ],
@@ -1027,7 +1027,7 @@
 					"parameter_enable" : 1,
 					"patching_rect" : [ 589.0, 351.0, 58.0, 26.5 ],
 					"presentation" : 1,
-					"presentation_rect" : [ 523.5, 81.5, 168.0, 22.5 ],
+					"presentation_rect" : [ 523.5, 127.5, 168.0, 39.5 ],
 					"saved_attribute_attributes" : 					{
 						"valueof" : 						{
 							"parameter_enum" : [ "0", "1" ],
@@ -1057,7 +1057,7 @@
 					"parameter_enable" : 1,
 					"patching_rect" : [ 505.0, 351.0, 58.0, 26.5 ],
 					"presentation" : 1,
-					"presentation_rect" : [ 350.5, 81.5, 168.0, 22.5 ],
+					"presentation_rect" : [ 350.5, 127.5, 168.0, 39.5 ],
 					"saved_attribute_attributes" : 					{
 						"valueof" : 						{
 							"parameter_enum" : [ "0", "1" ],
@@ -1088,7 +1088,7 @@
 					"parameter_enable" : 1,
 					"patching_rect" : [ 416.0, 351.0, 58.0, 26.5 ],
 					"presentation" : 1,
-					"presentation_rect" : [ 176.5, 81.5, 168.0, 22.5 ],
+					"presentation_rect" : [ 176.5, 127.5, 168.0, 39.5 ],
 					"saved_attribute_attributes" : 					{
 						"valueof" : 						{
 							"parameter_enum" : [ "0", "1" ],
@@ -1118,7 +1118,7 @@
 					"parameter_enable" : 1,
 					"patching_rect" : [ 338.5, 351.0, 58.0, 26.5 ],
 					"presentation" : 1,
-					"presentation_rect" : [ 2.5, 81.5, 168.0, 22.5 ],
+					"presentation_rect" : [ 2.5, 127.5, 168.0, 39.5 ],
 					"saved_attribute_attributes" : 					{
 						"valueof" : 						{
 							"parameter_enum" : [ "0", "1" ],
@@ -1191,6 +1191,8 @@
 					"numinlets" : 1,
 					"numoutlets" : 0,
 					"patching_rect" : [ 0.0, 169.0, 150.0, 20.0 ],
+					"presentation" : 1,
+					"presentation_rect" : [ 0.0, 169.0, 150.0, 20.0 ],
 					"text" : "Device size vertical limit"
 				}
 
