@@ -69,53 +69,13 @@
     windowWidth = window.innerWidth
   })
 
-
-  const ctx = {}
   const body = document.querySelector('body')
   body.classList.add('soni-background0')
-  function initContext() {
-    ctx.current = body,
-      ctx.currentVisibility = true,
-      ctx.parents = [],
-      ctx.parentVisibilities = []
-  }
-  initContext()
-
-  function nextNode(ctx) {
-    if (ctx.current.firstChild && ctx.current.nodeName !== 'SELECT') {
-      ctx.parents.push(ctx.current)
-      ctx.parentVisibilities.push(ctx.currentVisibility)
-      ctx.current = ctx.current.firstChild
-      return
-    }
-    if (ctx.current.nextSibling) {
-      ctx.current = ctx.current.nextSibling
-      return
-    }
-    let current = ctx.current
-    let max = 10000
-    while (true) {
-      current = current.parentNode
-      ctx.parents.pop()
-      ctx.currentVisibility = ctx.parentVisibilities.pop()
-      if (current.nextSibling) {
-        ctx.current = current.nextSibling
-        return
-      }
-      if (current.nodeName === 'BODY' || max-- < 0) {
-        // ctx.end = true
-        initContext()
-        return
-      }
-    }
-  }
 
   let highLightBuffer = []
-  let prevElem
   let working = false
 
   function visualize (ctx) {
-    window.max.outlet('visgo')
     const elem = ctx.current
     if ( !elem ) {
       return
@@ -162,6 +122,52 @@
 
         nextBuffer.push([now, elem])
         highLightBuffer = nextBuffer
+      }
+    }
+  }
+
+  const ctx = {}
+  function initContext() {
+    ctx.current = body
+    ctx.currentVisibility = true
+    ctx.parents = []
+    ctx.step = 0
+  }
+  initContext()
+
+  function nextNode(ctx) {
+    if (ctx.current.firstChild && ctx.current.nodeName !== 'SELECT') {
+      ctx.parents.push({
+        node: ctx.current,
+        visibility: ctx.currentVisibility,
+        step: ctx.step
+      })
+      ctx.step = 0
+      ctx.current = ctx.current.firstChild
+      return
+    }
+    if (ctx.current.nextSibling) {
+      ctx.current = ctx.current.nextSibling
+      ctx.step++
+      return
+    }
+    let current = ctx.current
+    let max = 10000
+    while (true) {
+      current = current.parentNode
+      const parent = ctx.parents.pop()
+      ctx.current = parent.node
+      ctx.currentVisibility = parent.visibility
+      ctx.step = parent.step
+      if (current.nextSibling) {
+        ctx.current = current.nextSibling
+        ctx.step++
+        return
+      }
+      if (current.nodeName === 'BODY' || max-- < 0) {
+        // ctx.end = true
+        initContext()
+        return
       }
     }
   }
@@ -213,7 +219,9 @@
       Math.max(rect.width, ctx.current.scrollWidth),
       Math.max(rect.height, ctx.current.scrollHeight),
       windowWidth,
-      ctx.current.nodeType
+      ctx.current.nodeType,
+      ctx.parents.length,
+      ctx.step
     ]
     working = false
   }
