@@ -136,7 +136,12 @@
   initContext()
 
   function nextNode(ctx) {
-    if (ctx.current.firstChild && ctx.current.nodeName !== 'SELECT') {
+    if (
+      ctx.current.firstChild 
+      && ctx.current.nodeName !== 'SELECT'
+      // TODO: Make this optional
+      && !(ctx.current.childNodes.length === 1 && ctx.current.firstChild.nodeName === '#text')
+    ) {
       ctx.parents.push({
         node: ctx.current,
         visibility: ctx.currentVisibility,
