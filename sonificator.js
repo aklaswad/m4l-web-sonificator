@@ -268,6 +268,7 @@
         glitchRatio = value
         break
       default:
+        window.max.outlet('warn', 'unknown key for set: ' + key + ':' + value)
     }
   })
 })()
