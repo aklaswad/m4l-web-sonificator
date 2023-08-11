@@ -132,6 +132,7 @@
     ctx.currentVisibility = true
     ctx.parents = []
     ctx.step = 0
+    ctx.end = false
   }
   initContext()
 
@@ -170,8 +171,9 @@
         return
       }
       if (current.nodeName === 'BODY' || max-- < 0) {
-        // ctx.end = true
-        initContext()
+        ctx.end = true
+        uninstallStylesheet()
+        //initContext()
         return
       }
     }
@@ -232,11 +234,15 @@
   }
 
   window.max.bindInlet('getnote', function () {
+    if ( ctx.end ) {
+      window.max.outlet('contentend')
+    }
     if ( ctx.nextOut ) {
        window.max.outlet('node', ...ctx.nextOut)
     }
     visualize(ctx)
     setTimeout(findNextNode, 1)
+    //findNextNode()
   })
 
   window.max.bindInlet('set', function (key, value) {
