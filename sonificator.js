@@ -74,6 +74,18 @@
 
   let highLightBuffer = []
   let working = false
+  let useVisualizer = true
+
+  function setVisualizer (enable) {
+    if (enable) {
+      installStylesheet()
+      useVisualizer = true
+    }
+    else {
+      uninstallStylesheet()
+      useVisualizer = false
+    }
+  }
 
   function visualize (ctx) {
     const elem = ctx.current
@@ -172,8 +184,6 @@
       }
       if (current.nodeName === 'BODY' || max-- < 0) {
         ctx.end = true
-        uninstallStylesheet()
-        //initContext()
         return
       }
     }
@@ -240,13 +250,17 @@
     if ( ctx.nextOut ) {
        window.max.outlet('node', ...ctx.nextOut)
     }
-    visualize(ctx)
+    if ( useVisualizer ) {
+      visualize(ctx)
+    }
     setTimeout(findNextNode, 1)
-    //findNextNode()
   })
 
   window.max.bindInlet('set', function (key, value) {
     switch (key) {
+      case 'visual':
+        setVisualizer(value)
+        break
       case 'visual.glitch':
         glitchRatio = value
         break
