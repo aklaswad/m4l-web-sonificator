@@ -140,55 +140,40 @@
 
   const ctx = {}
   function initContext() {
+    ctx.iterator = document.createTreeWalker(
+      body,
+      NodeFilter.SHOW_ALL,
+      (node) => {
+        if ( node.nodeName === 'SELECT' ) return NodeFilter.FILTER_REJECT
+        return NodeFilter.FILTER_ACCEPT
+      }
+    )
     ctx.current = body
     ctx.currentVisibility = true
     ctx.parents = []
     ctx.step = 0
     ctx.end = false
+    nextNode(ctx)
   }
   initContext()
 
   function nextNode(ctx) {
-    if (
-      ctx.current.firstChild 
-      && ctx.current.nodeName !== 'SELECT'
-      // TODO: Make this optional
-      && !(ctx.current.childNodes.length === 1 && ctx.current.firstChild.nodeName === '#text')
-    ) {
-      ctx.parents.push({
-        node: ctx.current,
-        visibility: ctx.currentVisibility,
-        step: ctx.step
-      })
-      ctx.step = 0
-      ctx.current = ctx.current.firstChild
+    const next = ctx.iterator.nextNode()
+    if ( next ) {
+      ctx.current = next
       return
     }
-    if (ctx.current.nextSibling) {
-      ctx.current = ctx.current.nextSibling
-      ctx.step++
+    ctx.end = true
+    setTimeout(() => {
+      initContext()
+    }, 1000)
+  }
+
+  function prevNode(ctx) {
+    const prev = ctx.iterator.nextNode()
+    if ( prev ) {
+      ctx.current = prev
       return
-    }
-    let current = ctx.current
-    let max = 10000
-    while (true) {
-      current = current.parentNode
-      const parent = ctx.parents.pop()
-      ctx.current = parent.node
-      ctx.currentVisibility = parent.visibility
-      ctx.step = parent.step
-      if (current.nextSibling) {
-        ctx.current = current.nextSibling
-        ctx.step++
-        return
-      }
-      if (current.nodeName === 'BODY' || max-- < 0) {
-        ctx.end = true
-        setTimeout(() => {
-          initContext()
-        }, 1000)
-        return
-      }
     }
   }
 
@@ -214,39 +199,15 @@
     let style
     let maxLoop = 1000
     nextNode(ctx)
-    LOOP:
-    while (maxLoop-- && rests > MAX_RESTS) {
-      const elem = ctx.current
-      if (elem.nodeType === 3 && !ctx.currentVisibility) {
-        continue
-      }
-      if (elem.nodeType !== 1) {
-        ctx.currentVisibility = 0
-        break LOOP
-      }
-      style = window.getComputedStyle(elem)
-      ctx.currentVisibility = style.display !== 'none'
-      if (ctx.currentVisibility) {
-        break LOOP
-      }
-      nextNode(ctx)
-    }
+
     const prevCount = getPreviousLength(ctx.current)
     const nextCount = getNextLength(ctx.current)
     const thisDepth = getDepth(ctx.current)
 
-    if (ctx.currentVisibility) {
-      rests = 0
-    }
-    else {
-      rests++
-    }
     let rect = { width: 0, height: 0 }
 
     if (ctx.current.nodeType === 1) {
-      if (ctx.currentVisibility) {
-        rect = ctx.current.getBoundingClientRect()
-      }
+      rect = ctx.current.getBoundingClientRect()
     }
     ctx.nextOut = [
       ctx.currentVisibility,
