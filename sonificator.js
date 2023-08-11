@@ -184,6 +184,9 @@
       }
       if (current.nodeName === 'BODY' || max-- < 0) {
         ctx.end = true
+        setTimeout(() => {
+          initContext()
+        }, 1000)
         return
       }
     }
