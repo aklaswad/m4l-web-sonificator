@@ -192,6 +192,18 @@
     }
   }
 
+  function getDepth (node) {
+    return node.nodeName.toLowerCase() === 'body' ? 0 : getDepth(node.parentNode) + 1
+  }
+
+  function getPreviousLength (node) {
+    return node.previousSibling ? getPreviousLength(node.previousSibling) + 1 : 0
+  }
+
+  function getNextLength (node) {
+    return node.nextSibling ? getNextLength(node.nextSibling) + 1 : 0
+  }
+
   function findNextNode () {
     if (working) {
       window.max.outlet('busy')
@@ -219,6 +231,9 @@
       }
       nextNode(ctx)
     }
+    const prevCount = getPreviousLength(ctx.current)
+    const nextCount = getNextLength(ctx.current)
+    const thisDepth = getDepth(ctx.current)
 
     if (ctx.currentVisibility) {
       rests = 0
@@ -240,8 +255,9 @@
       Math.max(rect.height, ctx.current.scrollHeight),
       windowWidth,
       ctx.current.nodeType,
-      ctx.parents.length,
-      ctx.step
+      thisDepth,
+      prevCount,
+      nextCount,
     ]
     working = false
   }
