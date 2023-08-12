@@ -145,6 +145,7 @@
       NodeFilter.SHOW_ALL,
       (node) => {
         if ( node.nodeName === 'SELECT' ) return NodeFilter.FILTER_REJECT
+        if ( node.nodeName === '#text' && !node.previousSibling ) return NodeFilter.FILTER_SKIP
         return NodeFilter.FILTER_ACCEPT
       }
     )
@@ -157,24 +158,29 @@
   }
   initContext()
 
-  function nextNode(ctx) {
-    const next = ctx.iterator.nextNode()
-    if ( next ) {
-      ctx.current = next
-      return
+  function nextNode(ctx, steps=1) {
+    let n=0
+    while (n++ <= steps) {
+      if ( ! ctx.iterator.nextNode() ) {
+        ctx.end = true
+        setTimeout(() => {
+          initContext()
+        }, 1000)
+        return
+      }
     }
-    ctx.end = true
-    setTimeout(() => {
-      initContext()
-    }, 1000)
+    ctx.current = ctx.iterator.currentNode
   }
 
-  function prevNode(ctx) {
-    const prev = ctx.iterator.nextNode()
-    if ( prev ) {
-      ctx.current = prev
-      return
+  function prevNode(ctx, steps=1) {
+    let n = 0
+    while (n++ <= steps ) {
+      if ( ! ctx.iterator.previousNode() ) {
+        ctx.current = ctx.iterator.currentNode
+        return
+      }
     }
+    ctx.current = ctx.iterator.currentNode
   }
 
   function getDepth (node) {
@@ -198,7 +204,12 @@
 
     let style
     let maxLoop = 1000
-    nextNode(ctx)
+    try {
+      nextNode(ctx)
+    }
+    catch (e) {
+      window.max.outlet('warn', e)
+    }
 
     const prevCount = getPreviousLength(ctx.current)
     const nextCount = getNextLength(ctx.current)
@@ -247,6 +258,14 @@
       default:
         window.max.outlet('warn', 'unknown key for set: ' + key + ':' + value)
     }
+  })
+
+  window.max.bindInlet('next', function (steps) {
+    nextNode(ctx, steps)
+  })
+
+  window.max.bindInlet('prev', function (steps) {
+    prevNode(ctx, steps)
   })
 })()
 
