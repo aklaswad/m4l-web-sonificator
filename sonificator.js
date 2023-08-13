@@ -9,7 +9,7 @@
     '.soni-background1 { -webkit-transition: all 5.5s; background-color: #080010 !important; }',
     '.soni-background2 { -webkit-transition: all 5.5s; background-color: #001008 !important; }',
     '.soni-background3 { -webkit-transition: all 5.5s; background-color: #100800 !important; }',
-    '.soni-no-bg, a.soni-no-bg { border-color: rgba(32,32,32,0.2) !important; color: #222 !important; background-color: rgba(0,0,0,0.0) !important;}',
+    '.soni-no-bg, a.soni-no-bg { border-color: rgba(32,32,32,0.2) !important; color: #444 !important; background-color: rgba(0,0,0,0.0) !important;}',
     '.soni-has-bg { border-color: rgba(32,32,32,0.2) !important; opacity: 0.2 !important; }',
     '.soni-no-bg.soni-highlight { color: rgba(255,255,255,0.9) !important; background-color: rgba(255,255,255, 0.4) !important; z-index: 100000;}',
     '.soni-has-bg.soni-highlight { opacity: 0.8 !important; }',
@@ -145,7 +145,7 @@
       NodeFilter.SHOW_ALL,
       (node) => {
         if ( node.nodeName === 'SELECT' ) return NodeFilter.FILTER_REJECT
-        //if ( node.nodeName === '#text' && !node.previousSibling && !node.nextSibling ) return NodeFilter.FILTER_SKIP
+        if ( node.nodeName === '#text' && (( !node.previousSibling && !node.nextSibling ) || !node.textContent ) ) return NodeFilter.FILTER_SKIP
         return NodeFilter.FILTER_ACCEPT
       }
     )
@@ -160,7 +160,7 @@
 
   function nextNode(ctx, steps=1) {
     let n=0
-    while (n++ <= steps) {
+    while (n++ < steps) {
       if ( ! ctx.iterator.nextNode() ) {
         ctx.end = true
         setTimeout(() => {
@@ -174,7 +174,7 @@
 
   function prevNode(ctx, steps=1) {
     let n = 0
-    while (n++ <= steps ) {
+    while (n++ < steps ) {
       if ( ! ctx.iterator.previousNode() ) {
         ctx.current = ctx.iterator.currentNode
         return
@@ -237,6 +237,7 @@
   window.max.bindInlet('getnote', function () {
     if ( ctx.end ) {
       window.max.outlet('contentend')
+      return
     }
     if ( ctx.nextOut ) {
        window.max.outlet('node', ...ctx.nextOut)

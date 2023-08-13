@@ -112,22 +112,23 @@
 			}
 , 			{
 				"box" : 				{
+					"appearance" : 2,
 					"id" : "obj-11",
 					"maxclass" : "live.dial",
 					"numinlets" : 1,
 					"numoutlets" : 2,
 					"outlettype" : [ "", "float" ],
 					"parameter_enable" : 1,
-					"patching_rect" : [ 770.0, 505.0, 41.0, 48.0 ],
+					"patching_rect" : [ 770.0, 505.0, 50.0, 80.0 ],
 					"presentation" : 1,
-					"presentation_rect" : [ 703.0, 12.0, 41.0, 48.0 ],
+					"presentation_rect" : [ 703.0, 12.0, 50.0, 80.0 ],
 					"saved_attribute_attributes" : 					{
 						"valueof" : 						{
 							"parameter_linknames" : 1,
 							"parameter_longname" : "live.dial[1]",
 							"parameter_mmax" : 1024.0,
 							"parameter_mmin" : 1.0,
-							"parameter_shortname" : "height",
+							"parameter_shortname" : "velocity / height",
 							"parameter_type" : 0,
 							"parameter_unitstyle" : 0
 						}
@@ -145,8 +146,8 @@
 					"numinlets" : 3,
 					"numoutlets" : 2,
 					"outlettype" : [ "float", "float" ],
-					"patching_rect" : [ 191.0, 524.0, 108.0, 22.0 ],
-					"text" : "makenote 100 100"
+					"patching_rect" : [ 191.0, 524.0, 197.0, 22.0 ],
+					"text" : "makenote 100 100 @repeatmode 1"
 				}
 
 			}
@@ -166,13 +167,15 @@
 , 			{
 				"box" : 				{
 					"id" : "obj-91",
+					"linecount" : 4,
 					"maxclass" : "message",
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 46.0, 498.0, 50.0, 22.0 ],
+					"patching_rect" : [ 46.0, 498.0, 50.0, 64.0 ],
 					"presentation" : 1,
-					"presentation_rect" : [ 696.5, 121.0, 331.0, 22.0 ]
+					"presentation_rect" : [ 696.5, 121.0, 331.0, 22.0 ],
+					"text" : "node #text 0. 0. 1327 3 8 0 4"
 				}
 
 			}
@@ -1715,7 +1718,7 @@
 			"obj-107" : [ "textedit[16]", "textedit", 0 ],
 			"obj-108" : [ "textedit[29]", "textedit", 0 ],
 			"obj-109" : [ "textedit[30]", "textedit", 0 ],
-			"obj-11" : [ "live.dial[1]", "height", 0 ],
+			"obj-11" : [ "live.dial[1]", "velocity / height", 0 ],
 			"obj-51" : [ "textedit", "textedit", 0 ],
 			"obj-95" : [ "textedit[13]", "textedit", 0 ],
 			"obj-96" : [ "textedit[20]", "textedit", 0 ],
