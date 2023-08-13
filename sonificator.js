@@ -145,7 +145,7 @@
       NodeFilter.SHOW_ALL,
       (node) => {
         if ( node.nodeName === 'SELECT' ) return NodeFilter.FILTER_REJECT
-        if ( node.nodeName === '#text' && !node.previousSibling ) return NodeFilter.FILTER_SKIP
+        //if ( node.nodeName === '#text' && !node.previousSibling && !node.nextSibling ) return NodeFilter.FILTER_SKIP
         return NodeFilter.FILTER_ACCEPT
       }
     )
