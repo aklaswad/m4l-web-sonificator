@@ -48,7 +48,8 @@
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 1000.0, 783.0, 50.0, 22.0 ],
 					"presentation" : 1,
-					"presentation_rect" : [ 519.75, 111.0, 50.0, 22.0 ]
+					"presentation_rect" : [ 519.75, 111.0, 50.0, 22.0 ],
+					"text" : "0"
 				}
 
 			}
@@ -178,7 +179,8 @@
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 944.0, 783.0, 50.0, 22.0 ],
 					"presentation" : 1,
-					"presentation_rect" : [ 461.0, 111.0, 50.0, 22.0 ]
+					"presentation_rect" : [ 461.0, 111.0, 50.0, 22.0 ],
+					"text" : "0"
 				}
 
 			}
@@ -191,7 +193,8 @@
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 881.5, 783.0, 50.0, 22.0 ],
 					"presentation" : 1,
-					"presentation_rect" : [ 398.5, 111.0, 50.0, 22.0 ]
+					"presentation_rect" : [ 398.5, 111.0, 50.0, 22.0 ],
+					"text" : "7"
 				}
 
 			}
@@ -204,7 +207,8 @@
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 822.25, 783.0, 50.0, 22.0 ],
 					"presentation" : 1,
-					"presentation_rect" : [ 339.25, 111.0, 50.0, 22.0 ]
+					"presentation_rect" : [ 339.25, 111.0, 50.0, 22.0 ],
+					"text" : "1"
 				}
 
 			}
@@ -217,7 +221,8 @@
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 763.0, 783.0, 50.0, 22.0 ],
 					"presentation" : 1,
-					"presentation_rect" : [ 280.0, 111.0, 50.0, 22.0 ]
+					"presentation_rect" : [ 280.0, 111.0, 50.0, 22.0 ],
+					"text" : "501"
 				}
 
 			}
@@ -230,7 +235,8 @@
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 703.75, 783.0, 50.0, 22.0 ],
 					"presentation" : 1,
-					"presentation_rect" : [ 220.75, 111.0, 50.0, 22.0 ]
+					"presentation_rect" : [ 220.75, 111.0, 50.0, 22.0 ],
+					"text" : "26"
 				}
 
 			}
@@ -243,7 +249,8 @@
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 644.5, 783.0, 50.0, 22.0 ],
 					"presentation" : 1,
-					"presentation_rect" : [ 161.5, 111.0, 50.0, 22.0 ]
+					"presentation_rect" : [ 161.5, 111.0, 50.0, 22.0 ],
+					"text" : "123"
 				}
 
 			}
@@ -256,7 +263,8 @@
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 585.25, 783.0, 50.0, 22.0 ],
 					"presentation" : 1,
-					"presentation_rect" : [ 102.25, 111.0, 50.0, 22.0 ]
+					"presentation_rect" : [ 102.25, 111.0, 50.0, 22.0 ],
+					"text" : "A"
 				}
 
 			}
@@ -269,7 +277,8 @@
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 526.0, 783.0, 50.0, 22.0 ],
 					"presentation" : 1,
-					"presentation_rect" : [ 43.0, 111.0, 50.0, 22.0 ]
+					"presentation_rect" : [ 43.0, 111.0, 50.0, 22.0 ],
+					"text" : "1"
 				}
 
 			}
@@ -619,7 +628,7 @@
 					"patching_rect" : [ 585.25, 710.0, 316.0, 22.0 ],
 					"presentation" : 1,
 					"presentation_rect" : [ 7.0, 140.0, 316.0, 22.0 ],
-					"text" : "loaded"
+					"text" : "title \"Creative tools for music makers | Ableton\""
 				}
 
 			}
@@ -717,6 +726,8 @@
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 763.0, 90.0, 231.0, 22.0 ],
+					"presentation" : 1,
+					"presentation_rect" : [ 332.0, 140.0, 237.75, 22.0 ],
 					"text" : "visend"
 				}
 
@@ -961,11 +972,11 @@
 				"box" : 				{
 					"id" : "obj-70",
 					"maxclass" : "newobj",
-					"numinlets" : 3,
-					"numoutlets" : 3,
-					"outlettype" : [ "", "", "" ],
-					"patching_rect" : [ 407.0, 56.0, 530.0, 22.0 ],
-					"text" : "route onloadend contentend"
+					"numinlets" : 4,
+					"numoutlets" : 4,
+					"outlettype" : [ "", "", "", "" ],
+					"patching_rect" : [ 407.0, 56.0, 187.0, 22.0 ],
+					"text" : "route onloadend contentend warn"
 				}
 
 			}
@@ -1052,7 +1063,6 @@
 						"style" : "",
 						"subpatcher_template" : "",
 						"assistshowspatchername" : 0,
-						"visible" : 1,
 						"boxes" : [ 							{
 								"box" : 								{
 									"fontsize" : 16.0,
