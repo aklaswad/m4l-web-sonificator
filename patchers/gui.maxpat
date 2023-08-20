@@ -628,7 +628,7 @@
 					"patching_rect" : [ 585.25, 710.0, 316.0, 22.0 ],
 					"presentation" : 1,
 					"presentation_rect" : [ 7.0, 140.0, 316.0, 22.0 ],
-					"text" : "title \"Creative tools for music makers | Ableton\""
+					"text" : "loaded"
 				}
 
 			}
@@ -999,7 +999,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 16.0, 241.0, 51.0, 22.0 ],
+					"patching_rect" : [ 16.0, 258.0, 51.0, 22.0 ],
 					"text" : "pcontrol"
 				}
 
@@ -1011,7 +1011,7 @@
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 16.0, 206.0, 35.0, 22.0 ],
+					"patching_rect" : [ 16.0, 223.0, 35.0, 22.0 ],
 					"presentation" : 1,
 					"presentation_rect" : [ 109.75, 51.0, 35.0, 22.0 ],
 					"text" : "open"
@@ -1035,7 +1035,7 @@
 						}
 ,
 						"classnamespace" : "box",
-						"rect" : [ 146.0, 124.0, 1200.0, 851.0 ],
+						"rect" : [ 543.0, 97.0, 889.0, 907.0 ],
 						"bglocked" : 0,
 						"openinpresentation" : 1,
 						"default_fontsize" : 12.0,
@@ -1063,7 +1063,20 @@
 						"style" : "",
 						"subpatcher_template" : "",
 						"assistshowspatchername" : 0,
+						"visible" : 1,
 						"boxes" : [ 							{
+								"box" : 								{
+									"id" : "obj-3",
+									"maxclass" : "newobj",
+									"numinlets" : 1,
+									"numoutlets" : 1,
+									"outlettype" : [ "bang" ],
+									"patching_rect" : [ 214.0, 14.0, 58.0, 22.0 ],
+									"text" : "loadbang"
+								}
+
+							}
+, 							{
 								"box" : 								{
 									"fontsize" : 16.0,
 									"id" : "obj-17",
@@ -1211,7 +1224,6 @@
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
 									"patching_rect" : [ 430.0, 270.0, 55.0, 22.0 ],
-									"presentation_linecount" : 2,
 									"text" : "prev 128"
 								}
 
@@ -1351,7 +1363,7 @@
 									"numinlets" : 2,
 									"numoutlets" : 2,
 									"outlettype" : [ "", "" ],
-									"patching_rect" : [ 209.0, 147.0, 59.0, 22.0 ],
+									"patching_rect" : [ 189.0, 137.0, 59.0, 22.0 ],
 									"text" : "route text"
 								}
 
@@ -1363,7 +1375,7 @@
 									"numinlets" : 1,
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
-									"patching_rect" : [ 206.0, 174.0, 69.0, 22.0 ],
+									"patching_rect" : [ 189.0, 164.0, 69.0, 22.0 ],
 									"text" : "prepend url"
 								}
 
@@ -1377,11 +1389,22 @@
 									"numinlets" : 1,
 									"numoutlets" : 4,
 									"outlettype" : [ "", "int", "", "" ],
-									"parameter_enable" : 0,
+									"parameter_enable" : 1,
 									"patching_rect" : [ 214.0, 49.0, 301.0, 26.0 ],
 									"presentation" : 1,
 									"presentation_rect" : [ 138.0, 2.0, 485.0, 22.0 ],
-									"text" : "https://www.ableton.com/"
+									"saved_attribute_attributes" : 									{
+										"valueof" : 										{
+											"parameter_invisible" : 1,
+											"parameter_longname" : "textedit",
+											"parameter_shortname" : "textedit",
+											"parameter_type" : 3
+										}
+
+									}
+,
+									"text" : "https://www.ableton.com/",
+									"varname" : "textedit"
 								}
 
 							}
@@ -1459,7 +1482,7 @@
 									"outlettype" : [ "" ],
 									"patching_rect" : [ 67.0, 329.0, 501.0, 252.0 ],
 									"presentation" : 1,
-									"presentation_rect" : [ 0.0, 28.0, 1612.0, 891.0 ],
+									"presentation_rect" : [ 0.0, 28.0, 1200.0, 823.0 ],
 									"rendermode" : 0,
 									"url" : "https://ableton.com",
 									"varname" : "thebrowser"
@@ -1527,6 +1550,13 @@
 								"patchline" : 								{
 									"destination" : [ "obj-14", 0 ],
 									"source" : [ "obj-23", 0 ]
+								}
+
+							}
+, 							{
+								"patchline" : 								{
+									"destination" : [ "obj-12", 0 ],
+									"source" : [ "obj-3", 0 ]
 								}
 
 							}
@@ -1640,7 +1670,7 @@
  ]
 					}
 ,
-					"patching_rect" : [ 16.0, 274.5, 108.0, 22.0 ],
+					"patching_rect" : [ 16.0, 291.5, 108.0, 22.0 ],
 					"saved_object_attributes" : 					{
 						"description" : "",
 						"digest" : "",
@@ -1670,20 +1700,8 @@
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "bang" ],
-					"patching_rect" : [ 116.5, 381.5, 58.0, 22.0 ],
+					"patching_rect" : [ 16.0, 193.5, 58.0, 22.0 ],
 					"text" : "loadbang"
-				}
-
-			}
-, 			{
-				"box" : 				{
-					"id" : "obj-55",
-					"maxclass" : "message",
-					"numinlets" : 2,
-					"numoutlets" : 1,
-					"outlettype" : [ "" ],
-					"patching_rect" : [ 116.5, 422.0, 127.0, 22.0 ],
-					"text" : "url https://ableton.com"
 				}
 
 			}
@@ -1949,13 +1967,6 @@
 			}
 , 			{
 				"patchline" : 				{
-					"destination" : [ "obj-59", 0 ],
-					"source" : [ "obj-55", 0 ]
-				}
-
-			}
-, 			{
-				"patchline" : 				{
 					"destination" : [ "obj-49", 1 ],
 					"source" : [ "obj-57", 1 ]
 				}
@@ -1970,7 +1981,7 @@
 			}
 , 			{
 				"patchline" : 				{
-					"destination" : [ "obj-55", 0 ],
+					"destination" : [ "obj-62", 0 ],
 					"source" : [ "obj-58", 0 ]
 				}
 
@@ -2224,6 +2235,7 @@
 			"obj-25" : [ "live.text", "live.text", 0 ],
 			"obj-37" : [ "live.dial[1]", "glitch ratio", 0 ],
 			"obj-39" : [ "live.text[1]", "live.text", 0 ],
+			"obj-60::obj-12" : [ "textedit", "textedit", 0 ],
 			"obj-60::obj-13" : [ "live.text[2]", "live.text[2]", 0 ],
 			"obj-60::obj-15" : [ "live.text[3]", "live.text[2]", 0 ],
 			"obj-60::obj-16" : [ "live.text[4]", "live.text[2]", 0 ],
