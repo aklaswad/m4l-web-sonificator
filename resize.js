@@ -1,4 +1,9 @@
 var browser = this.patcher.getnamed('thebrowser')
+
+function set (l,t,r,b) {
+  this.patcher.wind.setlocation(l,t,r,b)
+}
+
 function bang () {
   //browser.rect = [ 0, 30, this.patcher.wind.size[0], 100 ]
   if ( !browser ) {
@@ -17,5 +22,7 @@ function bang () {
     this.patcher.wind.size[0],
     this.patcher.wind.size[1] - 28
   )
+  var loc = this.patcher.wind.location
+  outlet(0, loc[0], loc[1], loc[2], loc[3])
 }
 post('resize v2')
