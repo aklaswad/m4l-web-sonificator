@@ -1,8 +1,8 @@
 {
-	"name" : "WebSonificatorLFO",
+	"name" : "WebSonificatorParam",
 	"version" : 1,
 	"creationdate" : 3775260739,
-	"modificationdate" : 3775282931,
+	"modificationdate" : 3775352786,
 	"viewrect" : [ 25.0, 107.0, 619.0, 713.0 ],
 	"autoorganize" : 0,
 	"hideprojectwindow" : 0,
@@ -10,23 +10,12 @@
 	"autolocalize" : 0,
 	"contents" : 	{
 		"patchers" : 		{
-			"output_lfo.maxpat" : 			{
-				"kind" : "patcher",
-				"local" : 1,
-				"toplevel" : 1,
-				"singleton" : 				{
-					"bootpath" : "~/Documents/Ableton/User Library/MyM4L/WebSonificator/patchers",
-					"projectrelativepath" : "../patchers"
-				}
-
-			}
-,
 			"MapButton.maxpat" : 			{
 				"kind" : "patcher",
 				"local" : 1,
 				"singleton" : 				{
 					"bootpath" : "~/Documents/Ableton/User Library/MyM4L/WebSonificator/patchers",
-					"projectrelativepath" : "../patchers"
+					"projectrelativepath" : "./patchers"
 				}
 
 			}
@@ -36,7 +25,18 @@
 				"local" : 1,
 				"singleton" : 				{
 					"bootpath" : "~/Documents/Ableton/User Library/MyM4L/WebSonificator/patchers",
-					"projectrelativepath" : "../patchers"
+					"projectrelativepath" : "./patchers"
+				}
+
+			}
+,
+			"output_param.maxpat" : 			{
+				"kind" : "patcher",
+				"local" : 1,
+				"toplevel" : 1,
+				"singleton" : 				{
+					"bootpath" : "~/Documents/Ableton/User Library/MyM4L/WebSonificator/patchers",
+					"projectrelativepath" : "./patchers"
 				}
 
 			}
