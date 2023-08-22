@@ -486,9 +486,9 @@
 							"parameter_enum" : [ "1", "2" ],
 							"parameter_initial" : [ 0.0 ],
 							"parameter_initial_enable" : 1,
-							"parameter_longname" : "live.text[1]",
+							"parameter_longname" : "Visualizer",
 							"parameter_mmax" : 1.0,
-							"parameter_shortname" : "live.text",
+							"parameter_shortname" : "Visualizer",
 							"parameter_type" : 1,
 							"parameter_unitstyle" : 0
 						}
@@ -531,9 +531,9 @@
 							"parameter_enum" : [ "1", "2" ],
 							"parameter_initial" : [ 0.0 ],
 							"parameter_initial_enable" : 1,
-							"parameter_longname" : "live.text",
+							"parameter_longname" : "Loop",
 							"parameter_mmax" : 1.0,
-							"parameter_shortname" : "live.text",
+							"parameter_shortname" : "Loop",
 							"parameter_type" : 1,
 							"parameter_unitstyle" : 0
 						}
@@ -628,7 +628,7 @@
 					"patching_rect" : [ 585.25, 710.0, 316.0, 22.0 ],
 					"presentation" : 1,
 					"presentation_rect" : [ 7.0, 140.0, 316.0, 22.0 ],
-					"text" : "title \"Creative tools for music makers | Ableton\""
+					"text" : "loaded"
 				}
 
 			}
@@ -705,7 +705,7 @@
 					"saved_attribute_attributes" : 					{
 						"valueof" : 						{
 							"parameter_linknames" : 1,
-							"parameter_longname" : "live.dial[1]",
+							"parameter_longname" : "Visualizer.glitch",
 							"parameter_mmax" : 1.0,
 							"parameter_shortname" : "glitch ratio",
 							"parameter_type" : 0,
@@ -714,7 +714,7 @@
 
 					}
 ,
-					"varname" : "live.dial[1]"
+					"varname" : "Visualizer.glitch"
 				}
 
 			}
@@ -1013,7 +1013,7 @@
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 16.0, 223.0, 35.0, 22.0 ],
 					"presentation" : 1,
-					"presentation_rect" : [ 109.75, 51.0, 35.0, 22.0 ],
+					"presentation_rect" : [ 7.0, 24.0, 35.0, 22.0 ],
 					"text" : "open"
 				}
 
@@ -1287,12 +1287,14 @@
 									"numoutlets" : 2,
 									"outlettype" : [ "", "" ],
 									"parameter_enable" : 1,
+									"parameter_mappable" : 0,
 									"patching_rect" : [ 489.0, 225.0, 35.0, 29.0 ],
 									"presentation" : 1,
 									"presentation_rect" : [ 697.0, -0.5, 35.0, 29.0 ],
 									"saved_attribute_attributes" : 									{
 										"valueof" : 										{
 											"parameter_enum" : [ "val1", "val2" ],
+											"parameter_invisible" : 2,
 											"parameter_longname" : "live.text[5]",
 											"parameter_mmax" : 1,
 											"parameter_shortname" : "live.text[2]",
@@ -1316,12 +1318,14 @@
 									"numoutlets" : 2,
 									"outlettype" : [ "", "" ],
 									"parameter_enable" : 1,
+									"parameter_mappable" : 0,
 									"patching_rect" : [ 595.0, 225.0, 35.0, 29.0 ],
 									"presentation" : 1,
 									"presentation_rect" : [ 787.0, 0.0, 35.0, 29.0 ],
 									"saved_attribute_attributes" : 									{
 										"valueof" : 										{
 											"parameter_enum" : [ "val1", "val2" ],
+											"parameter_invisible" : 2,
 											"parameter_longname" : "live.text[4]",
 											"parameter_mmax" : 1,
 											"parameter_shortname" : "live.text[2]",
@@ -1345,12 +1349,14 @@
 									"numoutlets" : 2,
 									"outlettype" : [ "", "" ],
 									"parameter_enable" : 1,
+									"parameter_mappable" : 0,
 									"patching_rect" : [ 430.0, 225.0, 35.0, 29.0 ],
 									"presentation" : 1,
 									"presentation_rect" : [ 660.0, -0.5, 35.0, 29.0 ],
 									"saved_attribute_attributes" : 									{
 										"valueof" : 										{
 											"parameter_enum" : [ "val1", "val2" ],
+											"parameter_invisible" : 2,
 											"parameter_longname" : "live.text[3]",
 											"parameter_mmax" : 1,
 											"parameter_shortname" : "live.text[2]",
@@ -1374,12 +1380,14 @@
 									"numoutlets" : 2,
 									"outlettype" : [ "", "" ],
 									"parameter_enable" : 1,
+									"parameter_mappable" : 0,
 									"patching_rect" : [ 540.0, 225.0, 35.0, 29.0 ],
 									"presentation" : 1,
 									"presentation_rect" : [ 750.0, -0.5, 35.0, 29.0 ],
 									"saved_attribute_attributes" : 									{
 										"valueof" : 										{
 											"parameter_enum" : [ "val1", "val2" ],
+											"parameter_invisible" : 2,
 											"parameter_longname" : "live.text[2]",
 											"parameter_mmax" : 1,
 											"parameter_shortname" : "live.text[2]",
@@ -1683,7 +1691,7 @@
 									"outlettype" : [ "" ],
 									"patching_rect" : [ 67.0, 329.0, 501.0, 252.0 ],
 									"presentation" : 1,
-									"presentation_rect" : [ 0.0, 28.0, 1403.0, 847.0 ],
+									"presentation_rect" : [ 0.0, 28.0, 1806.0, 847.0 ],
 									"rendermode" : 0,
 									"url" : "https://ableton.com",
 									"varname" : "thebrowser"
@@ -2591,9 +2599,9 @@
 			}
  ],
 		"parameters" : 		{
-			"obj-25" : [ "live.text", "live.text", 0 ],
-			"obj-37" : [ "live.dial[1]", "glitch ratio", 0 ],
-			"obj-39" : [ "live.text[1]", "live.text", 0 ],
+			"obj-25" : [ "Loop", "Loop", 0 ],
+			"obj-37" : [ "Visualizer.glitch", "glitch ratio", 0 ],
+			"obj-39" : [ "Visualizer", "Visualizer", 0 ],
 			"obj-60::obj-12" : [ "textedit", "textedit", 0 ],
 			"obj-60::obj-13" : [ "live.text[2]", "live.text[2]", 0 ],
 			"obj-60::obj-15" : [ "live.text[3]", "live.text[2]", 0 ],
