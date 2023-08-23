@@ -1677,7 +1677,7 @@
 				"box" : 				{
 					"comment" : "",
 					"id" : "obj-10",
-					"index" : 0,
+					"index" : 1,
 					"maxclass" : "outlet",
 					"numinlets" : 1,
 					"numoutlets" : 0,
@@ -1827,11 +1827,11 @@
 				"box" : 				{
 					"comment" : "",
 					"id" : "obj-2",
-					"index" : 0,
+					"index" : 1,
 					"maxclass" : "inlet",
 					"numinlets" : 0,
 					"numoutlets" : 1,
-					"outlettype" : [ "" ],
+					"outlettype" : [ "signal" ],
 					"patching_rect" : [ 51.0, 26.0, 30.0, 30.0 ]
 				}
 
@@ -1881,6 +1881,14 @@
 			}
  ],
 		"lines" : [ 			{
+				"patchline" : 				{
+					"destination" : [ "obj-14", 0 ],
+					"midpoints" : [ 84.5, 144.0, 60.5, 144.0 ],
+					"source" : [ "obj-1", 0 ]
+				}
+
+			}
+, 			{
 				"patchline" : 				{
 					"destination" : [ "obj-15", 0 ],
 					"source" : [ "obj-14", 0 ]
@@ -1932,6 +1940,69 @@
 			}
 , 			{
 				"patchline" : 				{
+					"destination" : [ "obj-1", 0 ],
+					"midpoints" : [ 60.5, 108.0, 84.5, 108.0 ],
+					"order" : 6,
+					"source" : [ "obj-2", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-3", 0 ],
+					"midpoints" : [ 60.5, 147.0, 84.5, 147.0 ],
+					"order" : 5,
+					"source" : [ "obj-2", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-4", 0 ],
+					"midpoints" : [ 60.5, 180.0, 84.5, 180.0 ],
+					"order" : 4,
+					"source" : [ "obj-2", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-5", 0 ],
+					"midpoints" : [ 60.5, 210.0, 84.5, 210.0 ],
+					"order" : 3,
+					"source" : [ "obj-2", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-6", 0 ],
+					"midpoints" : [ 60.5, 243.0, 84.5, 243.0 ],
+					"order" : 2,
+					"source" : [ "obj-2", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-8", 0 ],
+					"midpoints" : [ 60.5, 276.0, 84.5, 276.0 ],
+					"order" : 1,
+					"source" : [ "obj-2", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-9", 0 ],
+					"midpoints" : [ 60.5, 306.0, 84.5, 306.0 ],
+					"order" : 0,
+					"source" : [ "obj-2", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
 					"destination" : [ "obj-10", 0 ],
 					"source" : [ "obj-23", 0 ]
 				}
@@ -1946,255 +2017,60 @@
 			}
 , 			{
 				"patchline" : 				{
+					"destination" : [ "obj-14", 1 ],
+					"midpoints" : [ 84.5, 174.0, 60.0, 174.0, 60.0, 360.0, 81.333333333333329, 360.0 ],
+					"source" : [ "obj-3", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-14", 2 ],
+					"midpoints" : [ 84.5, 207.0, 60.0, 207.0, 60.0, 360.0, 102.166666666666657, 360.0 ],
+					"source" : [ "obj-4", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-14", 3 ],
+					"midpoints" : [ 84.5, 237.0, 60.0, 237.0, 60.0, 360.0, 123.0, 360.0 ],
+					"source" : [ "obj-5", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
 					"destination" : [ "obj-23", 0 ],
 					"source" : [ "obj-59", 0 ]
 				}
 
 			}
- ],
-		"parameters" : 		{
-			"obj-1::obj-14" : [ "Map[11]", "Map", 0 ],
-			"obj-1::obj-28" : [ "Unmap[11]", "Unmap", 0 ],
-			"obj-1::obj-3" : [ "TargetMax[7]", "Max", 0 ],
-			"obj-1::obj-33" : [ "border[20]", "border", 0 ],
-			"obj-1::obj-4" : [ "mode[6]", "mode", 0 ],
-			"obj-1::obj-8" : [ "TargetMin[7]", "Min", 0 ],
-			"obj-1::obj-9" : [ "border[21]", "border", 0 ],
-			"obj-23" : [ "Show Multimap[3]", "Multimap", 0 ],
-			"obj-3::obj-14" : [ "Map[1]", "Map", 0 ],
-			"obj-3::obj-28" : [ "Unmap[1]", "Unmap", 0 ],
-			"obj-3::obj-3" : [ "TargetMax[1]", "Max", 0 ],
-			"obj-3::obj-33" : [ "border[2]", "border", 0 ],
-			"obj-3::obj-4" : [ "mode[1]", "mode", 0 ],
-			"obj-3::obj-8" : [ "TargetMin[1]", "Min", 0 ],
-			"obj-3::obj-9" : [ "border[1]", "border", 0 ],
-			"obj-4::obj-14" : [ "Map[2]", "Map", 0 ],
-			"obj-4::obj-28" : [ "Unmap[2]", "Unmap", 0 ],
-			"obj-4::obj-3" : [ "TargetMax[2]", "Max", 0 ],
-			"obj-4::obj-33" : [ "border[3]", "border", 0 ],
-			"obj-4::obj-4" : [ "mode[2]", "mode", 0 ],
-			"obj-4::obj-8" : [ "TargetMin[2]", "Min", 0 ],
-			"obj-4::obj-9" : [ "border[4]", "border", 0 ],
-			"obj-5::obj-14" : [ "Map[3]", "Map", 0 ],
-			"obj-5::obj-28" : [ "Unmap[3]", "Unmap", 0 ],
-			"obj-5::obj-3" : [ "TargetMax[8]", "Max", 0 ],
-			"obj-5::obj-33" : [ "border[6]", "border", 0 ],
-			"obj-5::obj-4" : [ "mode[3]", "mode", 0 ],
-			"obj-5::obj-8" : [ "TargetMin[3]", "Min", 0 ],
-			"obj-5::obj-9" : [ "border[5]", "border", 0 ],
-			"obj-6::obj-14" : [ "Map[4]", "Map", 0 ],
-			"obj-6::obj-28" : [ "Unmap[4]", "Unmap", 0 ],
-			"obj-6::obj-3" : [ "TargetMax[9]", "Max", 0 ],
-			"obj-6::obj-33" : [ "border[7]", "border", 0 ],
-			"obj-6::obj-4" : [ "mode[4]", "mode", 0 ],
-			"obj-6::obj-8" : [ "TargetMin[4]", "Min", 0 ],
-			"obj-6::obj-9" : [ "border[8]", "border", 0 ],
-			"obj-8::obj-14" : [ "Map[5]", "Map", 0 ],
-			"obj-8::obj-28" : [ "Unmap[12]", "Unmap", 0 ],
-			"obj-8::obj-3" : [ "TargetMax[3]", "Max", 0 ],
-			"obj-8::obj-33" : [ "border[22]", "border", 0 ],
-			"obj-8::obj-4" : [ "mode[5]", "mode", 0 ],
-			"obj-8::obj-8" : [ "TargetMin[5]", "Min", 0 ],
-			"obj-8::obj-9" : [ "border[23]", "border", 0 ],
-			"obj-9::obj-14" : [ "Map[6]", "Map", 0 ],
-			"obj-9::obj-28" : [ "Unmap[13]", "Unmap", 0 ],
-			"obj-9::obj-3" : [ "TargetMax[4]", "Max", 0 ],
-			"obj-9::obj-33" : [ "border[24]", "border", 0 ],
-			"obj-9::obj-4" : [ "mode[7]", "mode", 0 ],
-			"obj-9::obj-8" : [ "TargetMin[8]", "Min", 0 ],
-			"obj-9::obj-9" : [ "border[25]", "border", 0 ],
-			"parameterbanks" : 			{
-				"0" : 				{
-					"index" : 0,
-					"name" : "",
-					"parameters" : [ "-", "-", "-", "-", "-", "-", "-", "-" ]
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-14", 4 ],
+					"midpoints" : [ 84.5, 270.0, 60.0, 270.0, 60.0, 360.0, 143.833333333333314, 360.0 ],
+					"source" : [ "obj-6", 0 ]
 				}
 
 			}
-,
-			"parameter_overrides" : 			{
-				"obj-3::obj-14" : 				{
-					"parameter_longname" : "Map[1]"
-				}
-,
-				"obj-3::obj-28" : 				{
-					"parameter_longname" : "Unmap[1]"
-				}
-,
-				"obj-3::obj-3" : 				{
-					"parameter_longname" : "TargetMax[1]"
-				}
-,
-				"obj-3::obj-33" : 				{
-					"parameter_longname" : "border[2]"
-				}
-,
-				"obj-3::obj-4" : 				{
-					"parameter_longname" : "mode[1]"
-				}
-,
-				"obj-3::obj-8" : 				{
-					"parameter_longname" : "TargetMin[1]"
-				}
-,
-				"obj-3::obj-9" : 				{
-					"parameter_longname" : "border[1]"
-				}
-,
-				"obj-4::obj-14" : 				{
-					"parameter_longname" : "Map[2]"
-				}
-,
-				"obj-4::obj-28" : 				{
-					"parameter_longname" : "Unmap[2]"
-				}
-,
-				"obj-4::obj-3" : 				{
-					"parameter_longname" : "TargetMax[2]"
-				}
-,
-				"obj-4::obj-33" : 				{
-					"parameter_longname" : "border[3]"
-				}
-,
-				"obj-4::obj-4" : 				{
-					"parameter_longname" : "mode[2]"
-				}
-,
-				"obj-4::obj-8" : 				{
-					"parameter_longname" : "TargetMin[2]"
-				}
-,
-				"obj-4::obj-9" : 				{
-					"parameter_longname" : "border[4]"
-				}
-,
-				"obj-5::obj-14" : 				{
-					"parameter_longname" : "Map[3]"
-				}
-,
-				"obj-5::obj-28" : 				{
-					"parameter_longname" : "Unmap[3]"
-				}
-,
-				"obj-5::obj-3" : 				{
-					"parameter_longname" : "TargetMax[8]"
-				}
-,
-				"obj-5::obj-33" : 				{
-					"parameter_longname" : "border[6]"
-				}
-,
-				"obj-5::obj-4" : 				{
-					"parameter_longname" : "mode[3]"
-				}
-,
-				"obj-5::obj-8" : 				{
-					"parameter_longname" : "TargetMin[3]"
-				}
-,
-				"obj-5::obj-9" : 				{
-					"parameter_longname" : "border[5]"
-				}
-,
-				"obj-6::obj-14" : 				{
-					"parameter_longname" : "Map[4]"
-				}
-,
-				"obj-6::obj-28" : 				{
-					"parameter_longname" : "Unmap[4]"
-				}
-,
-				"obj-6::obj-3" : 				{
-					"parameter_longname" : "TargetMax[9]"
-				}
-,
-				"obj-6::obj-33" : 				{
-					"parameter_longname" : "border[7]"
-				}
-,
-				"obj-6::obj-4" : 				{
-					"parameter_longname" : "mode[4]"
-				}
-,
-				"obj-6::obj-8" : 				{
-					"parameter_longname" : "TargetMin[4]"
-				}
-,
-				"obj-6::obj-9" : 				{
-					"parameter_longname" : "border[8]"
-				}
-,
-				"obj-8::obj-14" : 				{
-					"parameter_longname" : "Map[5]"
-				}
-,
-				"obj-8::obj-28" : 				{
-					"parameter_longname" : "Unmap[12]"
-				}
-,
-				"obj-8::obj-3" : 				{
-					"parameter_longname" : "TargetMax[3]"
-				}
-,
-				"obj-8::obj-33" : 				{
-					"parameter_longname" : "border[22]"
-				}
-,
-				"obj-8::obj-4" : 				{
-					"parameter_longname" : "mode[5]"
-				}
-,
-				"obj-8::obj-8" : 				{
-					"parameter_longname" : "TargetMin[5]"
-				}
-,
-				"obj-8::obj-9" : 				{
-					"parameter_longname" : "border[23]"
-				}
-,
-				"obj-9::obj-14" : 				{
-					"parameter_longname" : "Map[6]"
-				}
-,
-				"obj-9::obj-28" : 				{
-					"parameter_longname" : "Unmap[13]"
-				}
-,
-				"obj-9::obj-3" : 				{
-					"parameter_longname" : "TargetMax[4]"
-				}
-,
-				"obj-9::obj-33" : 				{
-					"parameter_longname" : "border[24]"
-				}
-,
-				"obj-9::obj-4" : 				{
-					"parameter_longname" : "mode[7]"
-				}
-,
-				"obj-9::obj-8" : 				{
-					"parameter_longname" : "TargetMin[8]"
-				}
-,
-				"obj-9::obj-9" : 				{
-					"parameter_longname" : "border[25]"
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-14", 5 ],
+					"midpoints" : [ 84.5, 303.0, 60.0, 303.0, 60.0, 360.0, 164.666666666666686, 360.0 ],
+					"source" : [ "obj-8", 0 ]
 				}
 
 			}
-,
-			"inherited_shortname" : 1
-		}
-,
-		"dependency_cache" : [ 			{
-				"name" : "MapButton.maxpat",
-				"bootpath" : "~/Documents/Ableton/User Library/MyM4L/WebSonificator/patchers",
-				"patcherrelativepath" : ".",
-				"type" : "JSON",
-				"implicit" : 1
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-14", 6 ],
+					"midpoints" : [ 84.5, 360.0, 185.5, 360.0 ],
+					"source" : [ "obj-9", 0 ]
+				}
+
 			}
- ],
-		"autosave" : 0
+ ]
 	}
 
 }
