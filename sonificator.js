@@ -88,7 +88,7 @@
   }
 
   function visualize (ctx) {
-    const elem = ctx.current
+    const elem = ctx.buffer
     if ( !elem ) {
       return
     }
@@ -152,6 +152,7 @@
     ctx.current = body
     ctx.currentVisibility = true
     ctx.parents = []
+    ctx.buffer
     ctx.step = 0
     ctx.end = false
     nextNode(ctx)
@@ -161,7 +162,10 @@
   function nextNode(ctx, steps=1) {
     let n=0
     while (n++ < steps) {
-      if ( ! ctx.iterator.nextNode() ) {
+      ctx.buffer = ctx.current
+      ctx.current = ctx.iterator.nextNode()
+      if ( ! ctx.current ) {
+        ctx.current = ctx.iterator.currentNode
         ctx.end = true
         setTimeout(() => {
           initContext()
@@ -169,13 +173,14 @@
         return
       }
     }
-    ctx.current = ctx.iterator.currentNode
   }
 
   function prevNode(ctx, steps=1) {
     let n = 0
     while (n++ < steps ) {
-      if ( ! ctx.iterator.previousNode() ) {
+      ctx.buffer = ctx.current
+      ctx.current = ctx.iterator.previousNode()
+      if ( ! ctx.current ) {
         ctx.current = ctx.iterator.currentNode
         return
       }
