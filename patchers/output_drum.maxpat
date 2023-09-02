@@ -172,7 +172,7 @@
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 46.0, 498.0, 50.0, 77.0 ],
+					"patching_rect" : [ 20.0, 479.0, 50.0, 77.0 ],
 					"presentation" : 1,
 					"presentation_rect" : [ 696.5, 121.0, 331.0, 22.0 ],
 					"text" : "node circle 3.2 3.2 501 1 13 2 0"
@@ -198,19 +198,8 @@
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 505.0, 511.0, 46.0, 22.0 ],
+					"patching_rect" : [ 275.0, 411.0, 46.0, 22.0 ],
 					"text" : "node A"
-				}
-
-			}
-, 			{
-				"box" : 				{
-					"id" : "obj-83",
-					"maxclass" : "newobj",
-					"numinlets" : 1,
-					"numoutlets" : 1,
-					"outlettype" : [ "" ],
-					"patching_rect" : [ 378.0, 468.0, 100.0, 22.0 ]
 				}
 
 			}
@@ -450,7 +439,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 191.0, 493.0, 104.0, 22.0 ],
+					"patching_rect" : [ 190.5, 489.0, 104.0, 22.0 ],
 					"saved_object_attributes" : 					{
 						"filename" : "drum-mapper.js",
 						"parameter_enable" : 0
@@ -1737,7 +1726,14 @@
 			"inherited_shortname" : 1
 		}
 ,
-		"dependency_cache" : [  ],
+		"dependency_cache" : [ 			{
+				"name" : "drum-mapper.js",
+				"bootpath" : "~/Documents/Ableton/User Library/MyM4L/WebSonificator",
+				"patcherrelativepath" : "..",
+				"type" : "TEXT",
+				"implicit" : 1
+			}
+ ],
 		"autosave" : 0,
 		"styles" : [ 			{
 				"name" : "rnbolight",

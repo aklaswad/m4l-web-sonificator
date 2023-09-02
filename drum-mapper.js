@@ -1,5 +1,5 @@
 var inlets = 1
-var outlets = 1
+var outlets = 2
 
 var map = {}
 var reverse_map = {}
@@ -34,5 +34,8 @@ function node (nodeName) {
     for ( var i=0; i<keys.length; i++) {
       outlet(0, Math.floor(keys[i]))
     }
+  }
+  else {
+    outlet(1, nodeName.toLowerCase())
   }
 }
